@@ -1,0 +1,203 @@
+/* 基本設定 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Audiowide", 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    color: white;
+    background: #222;
+    padding: 0 15px;
+    height: 100%;   
+}
+
+nav {
+    background: #222;
+}
+
+
+.menu,.subMenu {
+    list-style-type: none;
+}
+
+.menu li a:link{
+    text-decoration:none;
+}
+
+.menu li a:visited{
+    color: white;
+}
+
+.menu-item.hover{
+    background-color: #444444;
+}
+
+
+/* Mobile*/
+/* Mobile menu */
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .subMenu{
+        padding-left: 0px;
+    }
+
+
+    .menu li a {
+        display: block;
+        padding: 15px 5px;
+    }
+
+
+    .logo> a::before {
+        font-family: "Font Awesome 5 Free";
+        font-size: 100%;
+        line-height: 16px;
+        font-weight: 900;
+        content: "\f14e";
+        color: white;
+        padding-left: 5px;
+    }
+
+    .menu-item{
+        padding: 0px;
+        text-align: center;
+        width: 100%;
+        order: 3;
+    }
+
+    .menu-item.logo{
+        font-size: 150%	;
+        text-align: left;
+        width: 80%;
+        order: 0;
+        border-bottom: 1px #444 solid;
+        height: 70px;
+        line-height: 35px;
+    }
+
+    .menu-item.nav-button{
+        order: 2;
+        width: 10%;
+        border-bottom: 1px #444 solid;
+        height: 70px;
+        line-height: 35px;
+    }
+
+    .menu-item.contact{
+        order: 1;
+        width: 10%;
+        height: 70px;
+        line-height: 35px;
+    }
+
+    .menu-item.lastItem{
+        border-bottom: 1px #444 solid;
+    }
+
+
+    .toggle > a::after {
+        font-family: "Font Awesome 5 Free";
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 900;
+        content: "\f078";
+        color: white;
+        padding-left: 5px;
+    }
+
+    .toggle.waitopen > a::after {
+        font-family: "Font Awesome 5 Free";
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 900;
+        content: "\f053";
+        color: white;
+        padding-left: 5px;
+    }
+
+    .close {
+        display: none;
+    }
+
+/* Mobile*/
+/* Mobile 主文*/
+    .article{
+        max-width: 984px;
+        padding: 16px 0 14px;
+        margin: 0 auto;
+    }
+
+    .article > div{
+        padding: 12px;
+    }
+
+
+/* Desktop*/
+@media all and (min-width: 960px){
+
+    /* Desktop menu */
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px;
+        border-bottom: 3px #444 solid;
+    }
+
+    .menu > li{
+        height: 70px;
+        line-height: 35px;
+        flex: 2;
+        border: none;
+    } 
+
+    .menu-item{
+        font-size: 20px;
+        width: auto;
+        order: 1;
+        display: block;
+        border: none;
+        background-color: black;
+        z-index: 1;
+    }
+
+    .menu-item.logo{
+        border: none;
+        flex: 5;
+        font-size: 35px;
+        width: auto;
+    }
+
+    .menu-item.nav-button{
+        display: none;
+    }
+
+    .menu-item.lastItem{
+        border: none;
+    }
+    
+    .toggle > a::after {
+        content: "\f053";
+    }
+    
+    .toggle.waitopen > a::after {
+        content: "\f078";
+    }
+
+    /* Desktop article */
+    /* .article{
+        margin: 100px;
+        background-color: aqua;
+    } */
+    
+}
