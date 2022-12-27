@@ -4,6 +4,7 @@ let navigation = document.body.querySelector("nav");
 let navBarButton = document.body.querySelectorAll(".nav-button"); 
 navigation.addEventListener("click", toggleDisplay); //可隱藏式表單(menu bar/ menu list)
 navigation.addEventListener("pointerover", focusList); //游標經過時會變色，產生FOCUS的效果
+navigation.addEventListener("click", openNewTab); //點擊連結則跳轉分頁
 
 function toggleDisplay(event){ //1. 點擊介面可隱藏式表單(menu bar/ menu list) 2. 游標離開時自動隱藏
 
@@ -79,4 +80,12 @@ function focusList(event){ //游標經過時會變色，產生FOCUS的效果
 
 }
 
+function openNewTab(event){
+    let clickedItem = event.target.closest("li")
+    if(clickedItem.classList.contains("contact")){
+        let url = clickedItem.querySelector("a")
+        window.open(url, '_blank').focus();
+        event.preventDefault()
+    }
+}
 

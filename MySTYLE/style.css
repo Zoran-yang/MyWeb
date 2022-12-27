@@ -27,6 +27,12 @@ nav {
     text-decoration:none;
 }
 
+
+.menu li a:link{
+    color: white;
+}
+
+
 .menu li a:visited{
     color: white;
 }
